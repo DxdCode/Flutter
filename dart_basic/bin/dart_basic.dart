@@ -1,5 +1,4 @@
 
-import 'dart:ffi';
 
 void main(List<String> arguments) {
  // VARIABLE
