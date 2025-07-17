@@ -1,4 +1,6 @@
 
+import 'dart:ffi';
+
 void main(List<String> arguments) {
  // VARIABLE
   // var name = 'David';
@@ -64,11 +66,27 @@ void main(List<String> arguments) {
   a++; // lo hace despues
   ++a; // lo hace antes
 
+  //EJERCICIO 1: CALCULADORA DE EDAD
 
+  //Pedir al usuario su año de nacimiento (leerlo como string)
+  String date = '2004';
+  //Convertir el año de nacimiento a un numero entero
+  int intDate = int.parse(date);
+  //Calcular la edad restante el año de nacimiento al año actual (2025)
+  int fechaActual = 2025;
+  fechaActual-=intDate;
+  //Mostarlo el resultado en un mensaje como "Tienes x años"
+  print('Tines $fechaActual años');
 
-
-
-   print('Resultado es: $a');
+  //EJERCICIO 2: CALCULADORA DE PROPINA
+  
+  double totalCuenta = 200.20;
+  double propina = 12;
+  int totalpersonas = 4;
+  
+  double total = (totalCuenta * (propina/100)) + totalCuenta;
+  double cadaPersonaPagarTotal = total / totalpersonas;
+  print('Cada persona debe pagar $cadaPersonaPagarTotal'); 
 
 
 
